@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Password Generator</title>
+    <link rel="icon" type="image/x-icon" href="../assets/favicon.ico" />
+    <script src="../../tailwindcss.js"></script>
+    <script src="../utils/script.js"></script>
+  </head>
+  <body>
+    <div class="bg-gray-100 flex items-center justify-center h-screen">
+      <div class="bg-white p-8 rounded-lg shadow-lg w-96">
+        <h2 class="text-2xl font-bold mb-4">Password Generator</h2>
+        <div class="mb-4">
+          <label for="passwordLength" class="block text-gray-700"
+            >Password Length</label
+          >
+          <input
+            type="number"
+            id="passwordLength"
+            class="w-full mt-1 p-2 border border-gray-300 rounded-lg"
+            min="1"
+            max="128"
+            value="12"
+          />
+        </div>
+        <div class="flex flex-row space-x-2 items-center mb-4">
+          <input type="checkbox" id="includeUppercase" class="mt-1" />
+          <label for="includeUppercase" class="block text-gray-700">
+            Include Uppercase Letters</label
+          >
+        </div>
+        <div class="flex flex-row space-x-2 items-center mb-4">
+          <input type="checkbox" id="includeNumbers" class="mt-1" />
+          <label for="includeNumbers" class="block text-gray-700">
+            Include Numbers</label
+          >
+        </div>
+        <div class="flex flex-row space-x-2 items-center mb-4">
+          <input type="checkbox" id="includeSymbols" class="mt-1" />
+          <label for="includeSymbols" class="block text-gray-700">
+            Include Symbols</label
+          >
+        </div>
+        <button
+          id="generateBtn"
+          class="w-full bg-blue-500 text-white p-2 rounded-lg hover:bg-blue-600"
+          onclick="clickGenerateButton()"
+        >
+          Generate Password
+        </button>
+        <div class="mt-4">
+          <label for="generatedPassword" class="block text-gray-700"
+            >Generated Password</label
+          >
+          <input
+            type="text"
+            id="generatedPassword"
+            class="w-full mt-1 p-2 border border-gray-300 rounded-lg"
+            readonly
+          />
+        </div>
+      </div>
+    </div>
+    <script></script>
+  </body>
+</html>
